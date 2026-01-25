@@ -1,11 +1,3 @@
-/*
-
-DREAM PULSE
-
-https://templatemo.com/tm-536-dream-pulse
-
-*/
-
 body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -79,8 +71,9 @@ a {
   max-width: none;
 }
 
+
 .tm-brand {
-  font-size: 2.6rem;
+  font-size: 2rem;
 }
 
 .tm-brand-box {
@@ -172,6 +165,7 @@ a {
   font-size: 1.25rem;
   padding-top: 12px;
   padding-bottom: 12px;
+  text-align: right;
 }
 
 .nav-link .tm-white-rect {
