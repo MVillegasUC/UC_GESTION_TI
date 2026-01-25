@@ -673,3 +673,35 @@ figure.effect-bubba:hover p {
     padding: 50px 30px;
   }
 }
+
+/*AGREGADO TEST2*/
+/* ===== RUEDA DE ATRIBUTOS - IMAGEN SUPERPUESTA ===== */
+.hover-atributos {
+  position: relative;
+  display: inline-block;
+}
+
+/* Imagen superpuesta */
+.hover-image-overlay {
+  position: absolute;
+  top: 180%;
+  left: 72%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.hover-image-overlay img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* Hover SOLO en el h2 */
+.hover-atributos:hover .hover-image-overlay {
+  opacity: 1;
+  visibility: visible;
+}
