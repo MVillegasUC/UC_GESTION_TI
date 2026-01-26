@@ -778,3 +778,24 @@ figure.effect-bubba:hover p {
 }
 
 /*FIN SECCIÓN ENFOQUE METODOLÓGICO*/
+
+
+
+/*CORRECCIÓN ALINEACIÓN MENÚ LATERAL*/
+.tm-main-nav .nav-link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tm-main-nav .nav-link span:first-child {
+  text-align: right;
+  margin-right: 12px; /* reemplaza el mr-3 */
+  max-width: 180px;   /* controla textos largos */
+}
+
+.tm-main-nav .tm-white-rect {
+  flex-shrink: 0;
+}
+/*FIN CORRECCIÓN ALINEACIÓN MENÚ LATERAL*/
+
