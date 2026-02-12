@@ -93,3 +93,65 @@ jQuery(function() {
       closeMenu();
     });
 });
+
+
+$(document).on("click", ".efecto-tipgestion", function () {
+
+  var tipo = $(this).data("info");
+
+  var contenido = "";
+
+  if (tipo === "incidentes") {
+    contenido = `
+      <h2>Gestión de Incidentes</h2>
+      <p>Tiene como propósito restaurar el servicio lo antes posible, minimizando el impacto en el negocio.</p>
+      <ul>
+        <li>Respuesta rápida</li>
+        <li>Priorización por impacto</li>
+        <li>Resolución temporal o definitiva</li>
+      </ul>
+    `;
+  }
+
+  if (tipo === "problemas") {
+    contenido = `
+      <h2>Gestión de Problemas</h2>
+      <p>Busca identificar y eliminar la causa raíz de uno o más incidentes, reduciendo su recurrencia. Gestiona errores conocidos y soluciones temporales.</p>
+      <ul>
+        <li>Análisis causa raíz</li>
+        <li>Errores conocidos</li>
+        <li>Mejora continua</li>
+      </ul>
+    `;
+  }
+
+  if (tipo === "cambios") {
+    contenido = `
+      <h2>Gestión de Cambios</h2>
+      <p>La gestión de cambios en ITIL v4 (Change Enablement) tiene como objetivo maximizar el éxito de los cambios, asegurando que los riesgos sean evaluados y autorizados correctamente.</p>
+      <p>Tipos de cambios:</p>
+      <ul>
+        <li>Cambios estándar: bajo riesgo, preautorizados.</li>
+        <li>Cambios normales: requieren evaluación y aprobación.</li>
+        <li>Cambios de emergencia: se implementan con rapidez para resolver incidentes críticos.</li>
+      </ul>
+    `;
+  }
+
+  if (tipo === "capacidad") {
+    contenido = `
+      <h2>Gestión de Capacidad y Disponibilidad</h2>
+      <p>Asegura que los servicios funcionen con el rendimiento esperado.</p>
+      <ul>
+        <li>Capacidad suficiente (capacidad y rendimiento).</li>
+        <li>Se encuentren diisponibles cuando se necesitan.</li>
+        <li>Puedan continuar o recuperarse ante crisis.</li>
+      </ul>
+    `;
+  }
+
+  $("#tipos-info").fadeOut(200, function () {
+    $(this).html(contenido).fadeIn(300);
+  });
+
+});
